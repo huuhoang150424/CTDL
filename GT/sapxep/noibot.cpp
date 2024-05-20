@@ -31,12 +31,21 @@ void selectionSort(int a[],int n) {
 }
 // insertSort
 void insertSort(int a[],int n) {
-    int pos,x;
-    for (int i=0;i<n;i++) {
-        
+    for (int i=1;i<n;i++) {
+        int pos=i;
+        int x=a[i];
+        while (pos>0 && x<a[pos-1] )
+        {
+            a[pos]=a[pos-1];
+            pos--;
+        }
+        a[pos]=x;
     }
 }
-
+//Merge Sort
+void mergeSort(int a[],int n) {
+    
+}
 
 int main() {
     const int size=5;
@@ -44,7 +53,7 @@ int main() {
     for (int i=0;i<size;i++) {
         cin>>a[i];
     }
-    selectionSort(a,size);
+    insertSort(a,size);
     for (int i=0;i<size;i++) {
         cout<<a[i]<<" ";
     }
