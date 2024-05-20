@@ -24,7 +24,7 @@ private:
         }
     }
 public:
-    tree() {root=NULL;} // Thiếu dấu chấm phẩy
+    tree() {root=NULL;}
     //thêm node
     void addNode(T value) {
         if (root==NULL) root=new node<T>(value);
@@ -35,7 +35,7 @@ public:
     void printTree(node<T> *current) const {
         if (current!=NULL) {
             printTree(current->left);
-            std::cout<<current->data<<' '; // Sửa thành current->data
+            std::cout<<current->data<<' '; 
             printTree(current->right);
         }
     }
